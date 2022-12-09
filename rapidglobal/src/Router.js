@@ -11,8 +11,11 @@ function Router() {
       <BrowserRouter>
         <Routes>
           {/* <Route path="/login" element={<Login />} /> */}
-          <Route path="/" element={<Home />} />
-          <Route path="/:productId" element={<ModalForProduct />} />
+          <Route path="/assinment_rapidglobal" element={<Home />} />
+          <Route
+            path="/assinment_rapidglobal/:productId"
+            element={<ModalForProduct />}
+          />
         </Routes>
       </BrowserRouter>
     </>

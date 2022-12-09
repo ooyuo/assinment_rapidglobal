@@ -55,7 +55,7 @@ function Login() {
       onSuccess: (res) => {
         console.log(res.data);
         //console.log(setClientToken);
-        navigate("/", { state: { clientToken: res.data } });
+        navigate("/assinment_rapidglobal", { state: { clientToken: res.data } });
       },
       onError: (err) => {
         console.log(err);
