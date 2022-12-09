@@ -44,7 +44,7 @@ function Login() {
   const { isLoading, mutate: getClientToken } = useMutation(
     async () => {
       return await axios.post(
-        `http://ec2-52-79-228-35.ap-northeast-2.compute.amazonaws.com:8002/api/v1/auth/login`,
+        `https://ec2-52-79-228-35.ap-northeast-2.compute.amazonaws.com:8002/api/v1/auth/login`,
         {
           name: clientId,
           password: clientPassword,
@@ -55,7 +55,9 @@ function Login() {
       onSuccess: (res) => {
         console.log(res.data);
         //console.log(setClientToken);
-        navigate("/assinment_rapidglobal", { state: { clientToken: res.data } });
+        navigate("/assinment_rapidglobal", {
+          state: { clientToken: res.data },
+        });
       },
       onError: (err) => {
         console.log(err);

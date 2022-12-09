@@ -25,7 +25,7 @@ function ProductList() {
     "productList",
     async () => {
       return await axios.get(
-        `http://ec2-52-79-228-35.ap-northeast-2.compute.amazonaws.com:8002/api/v1/product/list`,
+        `https://ec2-52-79-228-35.ap-northeast-2.compute.amazonaws.com:8002/api/v1/product/list`,
         {
           headers: {
             Authorization: `Bearer ${access_token}`,
@@ -46,7 +46,7 @@ function ProductList() {
   const { isLoading: isUpdatingTitle, mutate: updateTitle } = useMutation(
     async () => {
       return await axios.put(
-        `http://ec2-52-79-228-35.ap-northeast-2.compute.amazonaws.com:8002/api/v1/product/${putTitle.id}`,
+        `https://ec2-52-79-228-35.ap-northeast-2.compute.amazonaws.com:8002/api/v1/product/${putTitle.id}`,
         {
           title: putTitle.title,
         },
