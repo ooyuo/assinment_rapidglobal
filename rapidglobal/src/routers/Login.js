@@ -44,7 +44,7 @@ function Login() {
   const { isLoading, mutate: getClientToken } = useMutation(
     async () => {
       return await axios.post(
-        `https://ec2-52-79-228-35.ap-northeast-2.compute.amazonaws.com:8002/api/v1/auth/login`,
+        `http://ec2-52-79-228-35.ap-northeast-2.compute.amazonaws.com:8002/api/v1/auth/login`,
         {
           name: clientId,
           password: clientPassword,
